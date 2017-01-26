@@ -1,1 +1,11 @@
-Add-Type -TypeDefinition ' using System;public class prog { public static void print(string args) { Console.WriteLine(\"hi koko\"); } } ';[prog]::print(1);
+Add-Type -TypeDefinition @" 
+using System;
+
+public class prog 
+{ 
+    public static void print() { 
+        Console.WriteLine("Hello World"); 
+    } 
+} 
+"@
+[prog]::print();
